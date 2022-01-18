@@ -1,6 +1,5 @@
 package validator;
 
-import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -47,7 +46,6 @@ public class TestAccount {
     }
 
     @Test
-    @DisplayName("Валидация поля держателя карты")
     public void validateCardHolderName() {
         boolean actual = account.checkNameToEmboss();
         assertEquals("Ошибка валидации поля держателя карты", excepted, actual);
